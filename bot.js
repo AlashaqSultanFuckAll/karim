@@ -13,17 +13,6 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-
-
-client.on('message', message => {
 if (message.content === "سبام" + "<@" + `${client.user.id}` + ">") {
       let count = 0;
       let ecount = 0;
