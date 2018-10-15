@@ -23,49 +23,6 @@ client.on('message', message => {
 
 
 
-if (command == "say") {
-let rank = message.guild.member(message.author).roles.find('name', '.');
-if (!rank) return message.reply('انت لا تمتلك الرتبه المخصصه لهذا الامر')
-  message.channel.send(args.join("  "))
-    message.delete();
-  }
-});
-
-
-
-client.on('message', message => {
-    if(message.content === '^^DailyForAll'){
-        message.channel.send('#daily')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '^^AllCredit'){
-        message.channel.send('#credits')
-    }
-});
-
-
-client.on('message', message => {
-    if(message.content === '^^RepForRobben'){
-        message.channel.send('#rep <@371060496276783104>')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '^^RepForBoss'){
-        message.channel.send('#rep <@443152649899212810>')
-    }
-});
-
-client.on('message', message => {
-    if(message.content === '^^RepForAlashaq'){
-        message.channel.send('#rep <@346045919072092161>')
-    }
-});
-
-
-
 client.on('message', message => {
 if (message.content === "سبام" + "<@" + `${client.user.id}` + ">") {
       let count = 0;
@@ -81,4 +38,4 @@ if (message.content === "سبام" + "<@" + `${client.user.id}` + ">") {
 });
 
 
-client.login('"MzQ2MDQ1OTE5MDcyMDkyMTYx.DpVjVA.3Y1zGLMwADCq9C2Xqa4DHtOTg3Q"');
+client.login(process.env.BOT_TOKEN);
